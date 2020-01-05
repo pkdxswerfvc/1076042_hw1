@@ -33,31 +33,31 @@ bool predictor(string state, string seq);
 
 		Predictor state	00	01	00	01	10	11	10	01	00  
 		Actual outcome	T	NT	T	T	T	NT	NT	NT	NT  
-		Prediction	N	N	N	N	T	T	T	N	N  
-		Miss		X	V	X	X	V	X	X	V	V  
+		Prediction		N	N	N	N	T	T	T	N	N  
+		Miss			X	V	X	X	V	X	X	V	V  
 		Misprediction rate: 55.6%  
 
 		Predictor state	00	00	00	01	10	11	11	10	11  
 		Actual outcome	NT	NT	T	T	T	T	NT	T	NT  
-		Prediction	N	N	N	N	T	T	T	T	T  
-		Miss		V	V	X	X	V	V	X	V	X  
+		Prediction		N	N	N	N	T	T	T	T	T  
+		Miss			V	V	X	X	V	V	X	V	X  
 		Misprediction rate: 44.4%
 
 		Predictor state	00	01	10	11	11	11	10	01	00	00	01	00	00	01  
 		Actual outcome	T	T	T	T	T	NT	NT	NT	NT	T	NT	NT	T	NT  
-		Prediction	N	N	T	T	T	T	T	N	N	N	N	N	N	N  
-		Miss		X	X	V	V	V	X	X	V	V	X	V	V	X	V  	
+		Prediction		N	N	T	T	T	T	T	N	N	N	N	N	N	N  
+		Miss			X	X	V	V	V	X	X	V	V	X	V	V	X	V  	
 		Misprediction rate: 42.9%  
 
 		Predictor state	00	01	10	11	11	11	11	11	11	11  
 		Actual outcome	T	T	T	T	T	T	T	T	T	T  
-		Prediction	N	N	T	T	T	T	T	T	T	T  
-		Miss		X	X	V	V	V	V	V	V	V	V  
+		Prediction		N	N	T	T	T	T	T	T	T	T  
+		Miss			X	X	V	V	V	V	V	V	V	V  
 		Misprediction rate: 20.0%  
 	
 		Predictor state	00	00	00	00	00	00	00  
 		Actual outcome	NT	NT	NT	NT	NT	NT	NT  
-		Prediction	N	N	N	N	N	N	N  
-		Miss		V	V	V	V	V	V	V  
+		Prediction		N	N	N	N	N	N	N  
+		Miss			V	V	V	V	V	V	V  
 		Misprediction rate: 0.0%  
 	
