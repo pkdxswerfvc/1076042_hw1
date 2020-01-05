@@ -11,7 +11,7 @@
 	4. 計算 Misprediction rate
 	5. 輸出結果
 
-## FINCTION
+## FUNCTION
 bool predictor(string state, string seq);
 此 function 用來預測 Taken 或 Not Taken，並回傳下一個狀態(state)。
 
