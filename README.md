@@ -31,10 +31,10 @@ bool predictor(string state, string seq);
 輸出檔包含 `Prediction`、`Miss or not` 以及 `Misprediction rate`。
 * **Example:** test_case_result.txt  
 
-		Predictor state	00    01    00    01    10    11    10    01    00  
-		Actual outcome	T     NT    T     T     T     NT    NT    NT    NT  
-		Prediction	N	N	N	N	T	T	T    N    N  
-		Miss		X	V	X	X	V	X	X    V    V  
+		Predictor state	00	01	00	01	10	11	10	01	00  
+		Actual outcome	T	NT	T	T	T	NT	NT	NT	NT  
+		Prediction	N	N	N	N	T	T	T	N	N  
+		Miss		X	V	X	X	V	X	X	V	V  
 		Misprediction rate: 55.6%  
 
 		Predictor state	00	00	00	01	10	11	11	10	11  
