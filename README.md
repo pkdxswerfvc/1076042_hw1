@@ -17,7 +17,7 @@ bool predictor(string state, string seq);
 
 ## INPUT FILE
 輸入檔包含 T(Taken) 及 NT(Not Taken)。
-* **Example:** test_case.txt
+* **Example:** test_case.txt  
 	T NT T T T NT NT NT NT  
 	NT NT T T T T NT T NT  
 	T T T T T NT NT NT NT T NT NT T NT  
