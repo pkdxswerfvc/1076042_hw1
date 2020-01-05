@@ -8,7 +8,7 @@
 
 using namespace std;
 
-bool predictor(string state, string seq);	// ¹w´ú function
+bool predictor(string state, string seq);	// é æ¸¬ function
 vector<string> predictor_state;
 
 int main() {
@@ -20,7 +20,7 @@ int main() {
 	vector<string> miss;
 	vector<string> prediction;
 
-	predictor_state.push_back("00");	// ªì©l state ª¬ºA
+	predictor_state.push_back("00");	// åˆå§‹ state ç‹€æ…‹
 	double misprediction_rate = 0;
 	int miss_count = 0;
 
@@ -50,18 +50,18 @@ int main() {
 		while (getline(infile, line)) {
 
 			istringstream iss(line);
-			for (std::string s; iss >> s; )	// ¤Á³Î¿é¤J§Ç¦C ¦s¤Jvector¤¤
+			for (std::string s; iss >> s; )	// åˆ‡å‰²è¼¸å…¥åºåˆ— å­˜å…¥vectorä¸­
 				input_sequence.push_back(s);
 
 			for (int i = 0; i < input_sequence.size(); i++) {
-				// ±µ¦¬ prediction µ²ªG
+				// æ¥æ”¶ prediction çµæœ
 				if (predictor(predictor_state[i], input_sequence[i]) == 0) {
 					prediction.push_back("N");
 				}
 				else {
 					prediction.push_back("T");
 				}
-				// §PÂ_¬O§_ miss
+				// åˆ¤æ–·æ˜¯å¦ miss
 				if (input_sequence[i] == "T") {
 					if (prediction[i] == "T") {
 						miss.push_back("V");
@@ -81,8 +81,8 @@ int main() {
 					}
 				}
 			}
-			misprediction_rate = ((double)miss_count / (double)input_sequence.size()) * 100.0;	// ­pºâ miss prediction ¤ñ¨Ò(%)
-																					// ¿é¥Xµ²ªG
+			misprediction_rate = ((double)miss_count / (double)input_sequence.size()) * 100.0;	// è¨ˆç®— miss prediction æ¯”ä¾‹(%)
+																					// è¼¸å‡ºçµæœ
 			cout << "Predictor state\t";
 			write_file << "Predictor state\t";
 			for (int i = 0; i < predictor_state.size() - 1; i++) {
@@ -118,7 +118,7 @@ int main() {
 			cout << "Misprediction rate: " << fixed << setprecision(1) << misprediction_rate << "%" << endl << endl;
 			write_file << "Misprediction rate: " << fixed << setprecision(1) << misprediction_rate << "%" << endl << endl;
 			
-			// ªì©l¤Æ
+			// åˆå§‹åŒ–
 			input_sequence.clear();
 			predictor_state.clear();
 			prediction.clear();
@@ -133,7 +133,7 @@ int main() {
 
 
 bool predictor(string state, string seq) {
-	bool prediction_result = 0; // ¹w´úµ²ªG¡A0¬°N 1¬°T
+	bool prediction_result = 0; // é æ¸¬çµæœï¼Œ0ç‚ºN 1ç‚ºT
 	if (state == "00") {
 		prediction_result = 0;
 		if (seq == "T") {
