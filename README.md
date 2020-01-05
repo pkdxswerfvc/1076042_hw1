@@ -18,6 +18,7 @@ bool predictor(string state, string seq);
 ## INPUT FILE
 輸入檔包含 T(Taken) 及 NT(Not Taken)。
 * **Example:** test_case.txt
+
 	T NT T T T NT NT NT NT
 	NT NT T T T T NT T NT
 	T T T T T NT NT NT NT T NT NT T NT
@@ -29,6 +30,7 @@ bool predictor(string state, string seq);
 ## OUTPUT FILE
 輸出檔包含 Prediction、Miss or not 以及 Misprediction rate。
 * **Example:** test_case_result.txt
+
 	Predictor state	00	01	00	01	10	11	10	01	00	
 	Actual outcome	
 	Prediction	N	N	N	N	T	T	T	N	N	
